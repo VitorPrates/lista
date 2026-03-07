@@ -111,7 +111,10 @@ let produtos = [
 
 // let nomes = produtos.map((produto) => produto.nome)
 // let nomes = produtos.map((produto => ({...produto,  preco: produto.preco_venda * 0.9})))
-let estoque = produtos.filter(
-  produtos => produtos.estoque <= 50 && produtos.rotatividade == "alta" && produtos.curva_abc == "A" 
-)
-console.table(estoque)
+// let estoque = produtos.filter(
+//   produtos => produtos.estoque <= 50 && produtos.rotatividade == "alta" && produtos.curva_abc == "A" 
+// )
+
+//
+let totalestoque = produtos.reduce((acumulator,item) => acumulator + (item.preco_compra*item.estoque),0);
+console.table(totalestoque)
