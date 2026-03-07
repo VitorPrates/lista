@@ -1,0 +1,50 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+html,body
+{
+    width: 100vw;
+    height: 100vh;
+}
+.produtos_table
+{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 5px;
+    width: 400px;
+    margin: 10px;
+    
+    .item
+    {
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 5px 15px;
+        margin: 5px;
+        h2
+        {
+            text-align: center;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            margin: -5px -15px 5px -15px;
+            border-radius: 8px 8px 0px 0px;
+        }
+        .item_infos
+        {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: auto;
+            text-align: center;
+            p
+            {
+                border: 1px solid;
+                margin: 3px;
+                border-radius: 5px;
+
+            }
+        }
+    }
+}

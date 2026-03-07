@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste produtos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="produtos.js" defer></script>
+  </head>
+  <body>
+    <h1>Produtos:</h1>
+    <div class="produtos_table">
+      <!-- <div class="item">
+        <h2>Item nome</h2>
+        <div class="item_infos">
+          <p>Preço de venda:</p>
+          <p>Rotatividade:</p>
+          <p>Preço de compra:</p>
+          <p>Curva_ABC:</p>
+          <p>Estoque:</p>
+        </div>
+      </div>
+      <div class="item">
+        <h2>Item nome</h2>
+        <div class="item_infos">
+          <p>Preço de venda</p>
+          <p>Rotatividade</p>
+          <p>Preço de compra</p>
+          <p>Curva_ABC</p>
+          <p>Estoque</p>
+        </div>
+      </div> -->
+    </div>
+
+    <script type="module">
+      import { produtos } from "./produtos.js";
+      // { id: 1, nome: "Coca-cola 2L", preco_venda: 10.0, preco_compra: 5.0, estoque: 100, rotatividade: "alta", curva_abc: "A" },
+      let tabela_produtos = document.querySelector(".produtos_table");
+
+    //   tabela_produtos.innerHTML += `
+    //     <div class="item">
+    //         <h2>${produtos[0].nome}</h2>
+    //         <div class="item_infos">
+    //             <p>Preço de venda<br> R$${produtos[0].preco_venda}</p>
+    //             <p>Rotatividade<br>${produtos[0].rotatividade}</p>
+    //             <p>Preço de compra<br>R$${produtos[0].preco_compra}</p>
+    //             <p>Curva_ABC<br>${produtos[0].curva_abc}</p>
+    //             <p>Estoque<br>${produtos[0].estoque}</p>
+    //         </div>
+    //     </div>
+    //     `;
+
+      produtos.forEach((item) => {
+        tabela_produtos.innerHTML += `
+        <div class="item">
+            <h2>${item.nome}</h2>
+            <div class="item_infos">
+                <p>Preço de venda: R$${item.preco_venda}</p>
+                <p>Rotatividade:${item.rotatividade}</p>
+                <p>Preço de compra:R$${item.preco_compra}</p>
+                <p>Curva_ABC:${item.curva_abc}</p>
+                <p>Estoque:${item.estoque}</p>
+            </div>
+        </div>
+        </a>
+        `;
+      });
+    </script>
+  </body>
+</html>
