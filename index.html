@@ -8,28 +8,33 @@
     <script src="produtos.js" defer></script>
   </head>
   <body>
-    <h1>Produtos:</h1>
-    <div class="produtos_table">
-      <!-- <div class="item">
-        <h2>Item nome</h2>
-        <div class="item_infos">
-          <p>Preço de venda:</p>
-          <p>Rotatividade:</p>
-          <p>Preço de compra:</p>
-          <p>Curva_ABC:</p>
-          <p>Estoque:</p>
+      <div class="frame_produtos">
+        <h1>Produtos:</h1>
+        <div class="produtos_table">
+        <!-- <div class="item">
+            <h2>Item nome</h2>
+            <div class="item_infos">
+            <p>Preço de venda:</p>
+            <p>Rotatividade:</p>
+            <p>Preço de compra:</p>
+            <p>Curva_ABC:</p>
+            <p>Estoque:</p>
+            </div>
         </div>
-      </div>
-      <div class="item">
-        <h2>Item nome</h2>
-        <div class="item_infos">
-          <p>Preço de venda</p>
-          <p>Rotatividade</p>
-          <p>Preço de compra</p>
-          <p>Curva_ABC</p>
-          <p>Estoque</p>
+        <div class="item">
+            <h2>Item nome</h2>
+            <div class="item_infos">
+            <p>Preço de venda</p>
+            <p>Rotatividade</p>
+            <p>Preço de compra</p>
+            <p>Curva_ABC</p>
+            <p>Estoque</p>
+            </div>
+        </div> -->
         </div>
-      </div> -->
+    </div>
+    <div class="pesquisador">
+        <h1>Pesquisar Coisas</h1>
     </div>
 
     <script type="module">
@@ -55,11 +60,11 @@
         <div class="item">
             <h2>${item.nome}</h2>
             <div class="item_infos">
-                <p>Preço de venda: R$${item.preco_venda}</p>
-                <p>Rotatividade:${item.rotatividade}</p>
-                <p>Preço de compra:R$${item.preco_compra}</p>
-                <p>Curva_ABC:${item.curva_abc}</p>
-                <p>Estoque:${item.estoque}</p>
+                <p>Preço de venda<br>R$${item.preco_venda}</p>
+                <p>Rotatividade<br>${item.rotatividade}</p>
+                <p>Preço de compra<br>R$${item.preco_compra}</p>
+                <p>Curva_ABC<br>${item.curva_abc}</p>
+                <p>Estoque<br>${item.estoque}</p>
             </div>
         </div>
         </a>
