@@ -116,5 +116,11 @@ let produtos = [
 // )
 
 //
-let totalestoque = produtos.reduce((acumulator,item) => acumulator + (item.preco_compra*item.estoque),0);
-console.table(totalestoque)
+// let totalestoque = produtos.reduce((acumulator,item) => acumulator + (item.preco_compra*item.estoque),0);
+// console.table(totalestoque)
+
+// let estoque = produtos.filter((produto) => produto.estoque <= 50)
+// console.table(estoque)
+
+let estoque = produtos.find(produto => produto.id == 25)
+console.table(estoque)
