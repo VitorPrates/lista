@@ -1,4 +1,4 @@
-let produtos = [
+export let produtos_exercicio = [
   { id: 1, nome: "Coca-cola 2L", preco_venda: 10.0, preco_compra: 5.0, estoque: 100, rotatividade: "alta", curva_abc: "A" },
   { id: 2, nome: "Pepsi 2L", preco_venda: 9.0, preco_compra: 4.5, estoque: 80, rotatividade: "alta", curva_abc: "B" },
   { id: 3, nome: "Fanta Laranja 2L", preco_venda: 8.0, preco_compra: 4.0, estoque: 60, rotatividade: "media", curva_abc: "B" },
@@ -122,5 +122,5 @@ let produtos = [
 // let estoque = produtos.filter((produto) => produto.estoque <= 50)
 // console.table(estoque)
 
-let estoque = produtos.find(produto => produto.id == 25)
-console.table(estoque)
+// let estoque = produtos.find(produto => produto.id == 25)
+// console.table(estoque)
