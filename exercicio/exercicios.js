@@ -1,5 +1,5 @@
 import { produtos_exercicio } from "../produtos copy.js";
-import { produtos } from "../produtos.js";
+// import { produtos } from "../produtos.js";
 // console.table(produtos_exercicio)
 
 /* ****************************** INSTRUÇÕES ******************************* 
@@ -157,8 +157,35 @@ function add_produto(
 // 9- Crie uma função que permita ao usuário remover um produto do estoque, solicitando o id a ser removido.
 function deletar_produtoID(id)
 {
-    let produtoBuscado = produtos.find(produto => produto.id == id)
+    console.log("Deletando: "+id)
+    let produtoBuscado = produtos_exercicio.find(produto => produto.id == id)
     console.log(produtoBuscado)
+    produtos_exercicio.splice(produtos_exercicio.indexOf(produtoBuscado),1)
+    console.table(produtos_exercicio)
 }
-deletar_produtoID(48)
+// deletar_produtoID(1)
+
 // 10- Crie uma função que permita ao usuário atualizar as informações de um produto existente no estoque, solicitando o id do produto e as novas informações a serem atualizadas.
+function atualizar_produto(
+    input_id = 1,
+    input_nome = "",
+    input_precovenda = 0,
+    input_precocompra = 0,
+    input_estoque = 0,
+    input_rotatividade = "",
+    input_curva_abc = "",
+)
+{
+    console.log("Atualizando: "+(produtos_exercicio.find(produto => produto.id == input_id).nome))
+
+    produtos_exercicio.find(produto => produto.id == input_id).nome = input_nome == "" ? produtos_exercicio.find(produto => produto.id == input_id).nome : input_nome
+    produtos_exercicio.find(produto => produto.id == input_id).preco_venda = input_precovenda == 0 ? produtos_exercicio.find(produto => produto.id == input_id).preco_venda : input_precovenda
+    produtos_exercicio.find(produto => produto.id == input_id).preco_compra = input_precocompra == 0 ? produtos_exercicio.find(produto => produto.id == input_id).preco_compra : input_precocompra
+    produtos_exercicio.find(produto => produto.id == input_id).estoque = input_estoque == 0 ? produtos_exercicio.find(produto => produto.id == input_id).estoque : input_estoque
+    produtos_exercicio.find(produto => produto.id == input_id).rotatividade = input_rotatividade == "" ? produtos_exercicio.find(produto => produto.id == input_id).rotatividade : input_rotatividade
+    produtos_exercicio.find(produto => produto.id == input_id).curva_abc = input_curva_abc == "" ? produtos_exercicio.find(produto => produto.id == input_id).curva_abc : input_curva_abc
+    
+    // console.log()
+    console.table(produtos_exercicio)
+}
+atualizar_produto(1,"Agua", 4.2, 1.3, 180, "alta", "b")
