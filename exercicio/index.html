@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <fieldset>
+    <fieldset class="pesquisador">
         <legend>Gestao de estoque</legend>
+        <p>PESQUISAR</p>
+        <button id="listar_todes" class="btn_listar_todes">Listar Todos</button>
         <div id="container_curva_ABC">
             <div class="selecaocurva">
                 <label for="A"> Curva A</label>
@@ -19,7 +21,7 @@
                 <input class="btnCurva" type="radio" name="curvaabc" id="B">
             </div>
             <div class="selecaocurva">
-                 <label for="C"> Curva C</label>
+                <label for="C"> Curva C</label>
                 <input class="btnCurva" type="radio" name="curvaabc" id="C">
             </div>
         </div>
@@ -27,14 +29,14 @@
     <fieldset id="fieldsetVisualizar">
         <legend>Visualizar</legend>
         <div id="containerDisplay">
-            <p>ID</p>
+            <!-- <p>ID</p>
             <p>NOME</p>
             <p>PREÇO VENDA</p>
             <p>ESTOQUE</p>
             <p>01</p>
             <p>Coca-cola</p>
             <p>R$ 8,50</p>
-            <p>45</p>
+            <p>45</p> -->
         </div>
     </fieldset>
 </body>
